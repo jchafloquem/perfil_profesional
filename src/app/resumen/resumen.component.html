@@ -1,0 +1,149 @@
+<section class="content" id="about">
+  <div class="block-content">
+    <h3 class="block-title">Perfil</h3>
+    <h3 class="subheading">¡Hola! soy Jorge;
+      <br>
+      <strong>
+        Analista, Consultor GIS & Programador FrontEnd
+      </strong>
+    </h3>
+    <p>Ingeniero de Sistemas, con estudios en análisis de datos espaciales con conocimientos y experiencia en
+       herramientas basadas en estos sistemas, como por ejemplo ArcGIS, QGIS o gvSIG. Desarrollador de visores en software libre y licenciado.
+    </p>
+    <div class="info-list row">
+      <div class="col-sm-6"><span>Nombre : </span> Jorge Chafloque Millones</div>
+      <div class="col-sm-6"><span>Fecha de Nacimiento : </span> Febrero 5</div>
+      <div class="col-sm-6"><span>Dirección : </span> Perú, Lima, Santiago de Surco.</div>
+      <div class="col-sm-6"><span>Email : </span> jchafloque.gis@gmail.com</div>
+      <div class="col-sm-6"><span>Teléfono : </span> + 51 998 429 784</div>
+      <div class="col-sm-6"><span>Interes : </span> Frelance, Full-Time</div>
+    </div>
+  </div>
+  <div class="block-content">
+    <h3 class="block-title">Experiencia Laboral</h3>
+    <div class="timeline experience">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="exp-holder">
+            <div *ngFor="let expex of cv.experiencia">
+              <div class="exp">
+                <div class="hgroup">
+                  <h4><span>{{ expex.empresa }}</span> {{ expex.cargo }}</h4>
+                  <h5> {{ expex.fecha }} </h5>
+                </div>
+                <p>{{ expex.descripcion }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-content">
+    <h3 class="block-title">Técnologia de Información</h3>
+    <div *ngFor="let profex of cv.profesional">
+      <label class="progress-bar-label">{{ profex.nombre }}</label>
+      <div class="progress">
+        <div [style.width.%]=profex.valor class="progress-bar" role="progressbar"
+          attr.aria-valuenow="{{ profex.valor }}" aria-valuemin="0" aria-valuemax="100">
+          <span>{{ profex.valor }}%</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-content">
+    <h3 class="block-title">Estudios Realizados</h3>
+    <div class="timeline education">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="exp-holder">
+            <div *ngFor="let edux of cv.educacion">
+              <div class="exp">
+                <div class="hgroup">
+                  <h4>{{ edux.nombre }} | <a href="{{ edux.url }}" target="_blank"><span>Ver Certificado</span></a></h4>
+                  <h5>{{ edux.fecha }}</h5>
+                </div>
+                <p>{{ edux.descripcion }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="block-content">
+    <h3 class="block-title">Servicios</h3>
+    <div class="row">
+      <div class="col-md-4 col-sm-6 service">
+        <div class="service-icon">
+          <i class="ion-android-archive"></i>
+        </div>
+        <h4>Base de datos - Geodatabase</h4>
+        <p>Diseño y modelado de base de datos geográficos. Migración de archivos CAD a SHAPE.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-6 service">
+        <div class="service-icon">
+          <i class="ion-map"></i>
+        </div>
+        <h4>Desarrollo de Aplicaciones Web</h4>
+        <p>Analisis, Diseño e implementación visores cartográficos.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-6 service">
+        <div class="service-icon">
+          <i class="ion-pie-graph"></i>
+        </div>
+        <h4>Desarrollo de Dashboard</h4>
+        <p>Para medir la eficacia de un proyecto basado en sus datos.
+        </p>
+      </div>
+      <div class="col-md-4 col-sm-6 service">
+        <div class="service-icon">
+          <i class="ion-printer"></i>
+        </div>
+        <h4>Elaboracion de Plano topográficos</h4>
+        <p>Planos elaborados en CAD o ArcGIS.
+        </p>
+      </div>
+    </div>
+  </div>
+ <!--  <div class="block-content">
+    <h3 class="block-title">Awards</h3>
+    <div class="row">
+      <div class="col-md-3 col-sm-6 awards">
+        <img src="assets\images\awards\1.jpeg" alt="">
+      </div>
+      <div class="col-md-3 col-sm-6 awards">
+        <img src="assets\images\awards\2.jpeg" alt="">
+      </div>
+      <div class="col-md-3 col-sm-6 awards">
+        <img src="assets\images\awards\3.jpeg" alt="">
+      </div>
+      <div class="col-md-3 col-sm-6 awards">
+        <img src="assets\images\awards\4.jpeg" alt="">
+      </div>
+    </div>
+  </div> -->
+  <div class="block-content">
+    <h3 class="block-title">Testimonios</h3>
+    <div class="row">
+      <div id="liontestimonial" class="owl-carousel owl-theme">
+        <div *ngFor="let testix of cv.testimonio">
+          <div class="item testimonials">
+            <img src="assets\images\testimonials\1.jpeg" alt="">
+            <blockquote>{{ testix.descripcion }}
+              <p class="quote"><span>{{ testix.nombre }}</span> - {{ testix.cargo }}</p>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row text-center">
+    <div class="col-md-12 btn-email">
+      <a class="btn lowercase contact menu-item">jchafloque.gis@gmail.com</a>
+    </div>
+  </div>
+</section>
+
