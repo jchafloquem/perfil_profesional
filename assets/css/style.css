@@ -386,6 +386,7 @@ a:not([href]):not([tabindex]) {
 .home .bgScroll {
     animation: 40s linear 0s normal none infinite running bgScroll;
     background: black url(../images/bg/wallpapers_gis.jpg) repeat scroll center top;
+
 }
 
 .bgScroll {
@@ -393,6 +394,9 @@ a:not([href]):not([tabindex]) {
     position: absolute;
     width: 100%;
     z-index: -1;
+}
+.imageReforz {
+  background: black url(../images/portfolio/reforzamiento.png) repeat scroll center top;
 }
 
 
@@ -1504,6 +1508,7 @@ h4.package {
     -webkit-box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3);
     box-shadow: 0 2px 7px 1px rgba(0, 0, 0, 0.3);
+
 }
 
 .portfolio-column:hover img {
