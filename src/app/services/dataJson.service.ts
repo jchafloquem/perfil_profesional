@@ -11,5 +11,31 @@ export class DataJsonService {
   experiencia: any[] = [];
   blog: any[] = [];
 
-  constructor() { }
+  constructor() {
+    this.CargarProfesional();
+    this.CargarEducacion();
+    this.CargarTestimonio();
+    this.CargarExperiencia();
+  }
+
+  private CargarProfesional() {
+    fetch('https://jchafloquemcv-default-rtdb.firebaseio.com/profesional.json').then(resp => {
+      resp.json().then(data => this.profesional = data)
+    })
+  }
+  private CargarEducacion() {
+    fetch('https://jchafloquemcv-default-rtdb.firebaseio.com/educacion.json').then(resp => {
+      resp.json().then(data => this.educacion = data)
+    })
+  }
+  private CargarTestimonio() {
+    fetch('https://jchafloquemcv-default-rtdb.firebaseio.com/testimonios.json').then(resp => {
+      resp.json().then(data => this.testimonio = data)
+    })
+  }
+  private CargarExperiencia() {
+    fetch('https://jchafloquemcv-default-rtdb.firebaseio.com/experiencia.json').then(resp => {
+      resp.json().then(data => this.experiencia = data)
+    })
+  }
 }
